@@ -1,6 +1,17 @@
+.main {
+    overflow-x: hidden;
+    background-color: #f5f6fa;
+    height: 100%;
+}
 .Head1 {
     display: flex;
     justify-content: space-around;
+    background-color: white;
+    .History {
+        font-weight: 100;
+        font-size: small;
+        margin-top: 17px;
+    }
 }
 .Head2 {
     display: flex;
@@ -8,6 +19,85 @@
     font: normal normal normal 25px/30px Montserrat;
     letter-spacing: 0px;
     color: #ffffff;
-    background-color: #446DFF;
+    background-color: #446dff;
     margin: 0px -10px;
 }
+.MainBody {
+    display: flex;
+    flex-direction: column;
+    margin: 54px auto 0px auto;
+    width: 40%;
+    .Choose {
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        line-height: 19px;
+        font-weight: bold;
+    }
+    .Top {
+        display: flex;
+        justify-content: space-between;
+
+        .Box {
+            width: 30%;
+            height: 150px;
+            background: #ffffff 0% 0% no-repeat padding-box;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            img {
+                height: 46px;
+            }
+            p {
+                font-family: normal normal medium 15px/19px Montserrat;
+                font-size: 15px;
+                line-height: 19px;
+                font-weight: 600;
+                color: #c9c9c9;
+            }
+        }
+    }
+}
+.ChangeLength
+{
+
+    border: 1px solid #0EC098;
+    background: #EDFDF9 !important;
+    p{
+        color: #0EC098;
+        opacity: 1 !important;
+    }
+}
+.Down {
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: white;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: white !important;
+    border: 1px solid #e7dcfe !important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+    padding: 0px !important;
+}
+::ng-deep input.mat-input-element{
+    padding-left: 0.75em;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-select-arrow-wrapper{
+    transform: none !important;
+}
+::ng-deep .mat-select-value{
+    padding-left: 10px;
+}
+::ng-deep .mat-form-field-infix {
+    width: 250px !important;
+}
+

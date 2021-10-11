@@ -1,9 +1,118 @@
-<div>
+<div class="main">
     <div class="Head1">
-        <p>Quanment</p>
-        <p>History</p>
+        <p style="font-weight: 500; padding-top: 15px;">Quanment</p>
+        <p class="History">History</p>
     </div>
     <div class="Head2">
-        <p>Welcome To Quantity Measurement</p>
+        <p style="padding-top: 10px;">Welcome To Quantity Measurement</p>
     </div>
+    <div class="MainBody">
+        <p class="Choose">CHOOSE TYPE</p>
+        <div class="Top">
+            <div class="Box" [ngClass]="choice == 'ChangeLength'? 'length-block':''" (click)="choice='length';from='Meter';to='Centimeter'">
+                <img [src]=" choice == 'length' ? '../../../assets/scale1.png':'../../../assets/scale.png'" style="width: 12px;" />
+                <p>Length</p>
+            </div>
+            <div class="Box" (click)="choice='temperature';from='Celsius';to='Fahrenheit'">
+                <img [src]=" choice == 'temperature' ? '../../../assets/hot1.png':'../../../assets/hot.png'" style="width: 29px;" />
+                <p>Temperature</p>
+            </div>
+            <div class="Box" [ngClass]="choice == 'ChangeLength'? 'length-block':''" (click)="choice='volume';from='Litres';to='Millilitres'">
+                <img [src]=" choice == 'volume' ? '../../../assets/beaker1.png':'../../../assets/beaker.png'" style="width: 45px;" />
+                <p [style]="choice == 'ChangeLength'? 'color: #0EC098;':'color: ##ffffff;'" >Volume</p>
+            </div>
+        </div>
+        <!-- Volume -->
+        <div class="Down" *ngIf="choice == 'volume'">
+            <div class="FromBox">
+                <p>FROM</p>
+                <mat-form-field appearance="fill">
+                    <input matInput value="1">
+                    <hr>
+                    <mat-select disableOptionCentering [(value)]="from">
+                        <mat-option value="Litres">Litres</mat-option>
+                        <mat-option value="Millilitres">Millilitres</mat-option>
+                        <mat-option value="Gallons">Gallons</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="ToBox">
+                <p>TO</p>
+                <mat-form-field appearance="fill">
+                    <input matInput value="1000">
+                    <hr>
+                    <mat-select disableOptionCentering [(value)]="to">
+                        <mat-option value="Litres">Litres</mat-option>
+                        <mat-option value="Millilitres">Millilitres</mat-option>
+                        <mat-option value="Gallons">Gallons</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- Temperature -->
+        <div class="Down" *ngIf="choice == 'temperature'">
+            <div class="FromBox">
+                <p>FROM</p>
+                <mat-form-field appearance="fill">
+                    <input matInput value="1">
+                    <hr>
+                    <mat-select disableOptionCentering [(value)]="from">
+                        <mat-option value="Celsius">Celsius</mat-option>
+                        <mat-option value="Fahrenheit">Fahrenheit</mat-option>
+                        <mat-option value="Kelvin">Kelvin</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="ToBox">
+                <p>TO</p>
+                <mat-form-field appearance="fill">
+                    <input matInput value="1000">
+                    <hr>
+                    <mat-select disableOptionCentering [(value)]="to">
+                        <mat-option value="Celsius">Celsius</mat-option>
+                        <mat-option value="Fahrenheit">Fahrenheit</mat-option>
+                        <mat-option value="Kelvin">Kelvin</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- Length -->
+        <div class="Down" *ngIf="choice == 'length'">
+            <div class="FromBox">
+                <p>FROM</p>
+                <mat-form-field appearance="fill">
+                    <input matInput value="1">
+                    <hr>
+                    <mat-select disableOptionCentering [(value)]="from">
+                        <mat-option value="Kilometer">Kilometer</mat-option>
+                        <mat-option value="Meter">Meter</mat-option>
+                        <mat-option value="Centimeter">Centimeter</mat-option>
+                        <mat-option value="Milimeter">Milimeter</mat-option>
+                        <mat-option value="Micrometer">Micrometer</mat-option>
+                        <mat-option value="Mile">Mile</mat-option>
+                        <mat-option value="Foot">Foot</mat-option>
+                        <mat-option value="Inch">Inch</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="ToBox">
+                <p>TO</p>
+                <mat-form-field appearance="fill">
+                    <input matInput value="1000">
+                    <hr>
+                    <mat-select disableOptionCentering [(value)]="to">
+                        <mat-option value="Kilometer">Kilometer</mat-option>
+                        <mat-option value="Meter">Meter</mat-option>
+                        <mat-option value="Centimeter">Centimeter</mat-option>
+                        <mat-option value="Milimeter">Milimeter</mat-option>
+                        <mat-option value="Micrometer">Micrometer</mat-option>
+                        <mat-option value="Mile">Mile</mat-option>
+                        <mat-option value="Foot">Foot</mat-option>
+                        <mat-option value="Inch">Inch</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+
 </div>
